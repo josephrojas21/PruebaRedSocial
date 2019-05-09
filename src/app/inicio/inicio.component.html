@@ -1,0 +1,33 @@
+<div class="contenedor">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="titulo text-capitalize mt-5 mb-5">
+        <h1>Bienvenido S.H.I.E.l.D te necesita</h1>
+      </div>
+    </div>
+    <div class="row justify-content-center  ">
+      <div class="col-6 inicio">
+        <div class="row">
+          <div class="col-12  text-center mt-3">
+            <h2>Soy nick fury y tengo una tarea para ti </h2>
+          </div>
+        </div>
+        <div class="row ">
+          <div class="col-6 mb-5 mt-5">
+              <input type="text" class="form-control " [(ngModel)]="nombre"  placeholder="Ingresa tu nombre" required>
+              <button type="button" class="btn btn-secondary mt-2" routerLink="/home" (click)="entrar()">Entrar</button>              
+              <br>
+              <p class="mt-3">
+                Necesito que me digas de quien es el poder que aparecera en la burbuja 
+                y lo selecciones, una vez un heroe llegue a 10 puntos estaremos listos 
+                para la batalla.
+              </p>
+          </div>
+          <div class="col-6 ">
+            <img src="../../assets/Imgs/nick.png" alt="" class="img-fluid nick">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

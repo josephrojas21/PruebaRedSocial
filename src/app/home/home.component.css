@@ -1,0 +1,62 @@
+.fondo{
+    background:  url(../../assets/Imgs/fondo.jpg) !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important ;
+    background-position: center!important;
+    
+}
+
+.burbuja{
+    background: rgba(51, 51, 51, 0.85);
+    margin-top: 10% !important;
+    display: block !important;
+    margin: 0 auto ;
+    border-radius: 50% !important;
+    padding: 8%;
+    width: 120px;
+    color:white;
+}
+
+.poder{
+    margin: 0 auto !important;
+}
+
+.borde{
+    border: 1px solid black;
+}
+
+.heroe{
+    height: 200px !important;
+}
+
+.filaHeroes{
+    background: rgba(51, 51, 51, 0.85);
+    border-radius: 5%;
+    padding-left: 7% !important;
+}
+
+
+.stars-outer {
+    display: inline-block;
+    position: relative;
+    font-family: FontAwesome;
+  }
+   
+  .stars-outer::before {
+    content: "\f006 \f006 \f006 \f006 \f006\f006 \f006 \f006 \f006 \f006";
+  }
+   
+  .stars-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+  }
+   
+  .stars-inner::before {
+    content: "\f005 \f005 \f005 \f005 \f005\f005 \f005 \f005 \f005 \f005";
+    color: #f8ce0b;
+  }
+

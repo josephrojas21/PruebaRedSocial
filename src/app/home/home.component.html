@@ -1,0 +1,45 @@
+<app-menu></app-menu>
+<div class="fondo">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="title mt-5 text-white">
+        <h2 >Bienvenido  {{nombre}}</h2>
+      </div>
+    </div>
+    <div class="row">
+        <div class="burbuja col-4 ">
+          <div class="poder">
+            <h3>{{poderActual}}</h3>
+          </div>
+        </div>
+    </div>
+    <div class="row flex-row mt-5 ml-5 text-white filaHeroes">
+      <ng-container  *ngFor="let perfil of heroes let i= index ;" >
+        <div  class="col-2  mr-1 ml-1 align-content-center">
+          <div class="row">
+            <div class="col-12 ">
+              <span > {{perfil.nombre | camelCase}}</span>
+            </div>
+          </div>
+          <div class="row" >
+            <div class="col-12 ">
+              <img [src]="perfil.img" alt="" class="img-fluid heroe">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+                <ngb-rating [(rate)]="currentRate[i]"></ngb-rating>
+                <!-- <div class="stars-outer">
+                    <div class="stars-inner"></div>
+                </div> -->
+                <button class="btn btn-sm btn-outline-primary mr-2" (click)="revisar(i,perfil.poder1,perfil.poder2,perfil.poder3)">jugar</button>
+                <br>
+                <p>Puntaje: <b>{{currentRate[i]}}</b></p>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+      
+    </div>
+  </div>
+</div>

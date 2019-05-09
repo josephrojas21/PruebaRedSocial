@@ -1,0 +1,19 @@
+import { Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({
+  name: 'camelCase'
+})
+export class CamelCasePipe implements PipeTransform {
+
+  transform(value, args: string): any {
+    return value = this.camelize(value)
+  }
+
+
+  camelize(str) {
+    return str.replace(/(?:^\w|[A-Z]|\b\w)/g, function(word, index) {
+      return index == 0 ? word.toLowerCase() : word.toUpperCase();
+    }).replace(/\s+/g, '');
+  }
+
+}

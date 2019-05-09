@@ -1,0 +1,19 @@
+.contenedor{
+    background:  url(../../assets/Imgs/fondo.jpg) !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important ;
+    background-position: center!important;
+    height: 100% !important;
+    weight: 100%;
+    padding-bottom: 25%;
+    color: white;
+}
+.inicio{
+background: rgba(38, 38, 38, 0.77);
+border-radius: 4%;
+color: white;
+}
+
+.nick{
+height: 75%;
+}
