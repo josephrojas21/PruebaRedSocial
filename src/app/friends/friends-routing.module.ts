@@ -1,13 +1,15 @@
-import { HeroesComponent } from './heroes.component';
+import { FriendsComponent } from './friends.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  {path:'', component:HeroesComponent}
+  {
+    path: '', component: FriendsComponent
+  }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class HeroesRoutingModule { }
+export class FriendsRoutingModule { }

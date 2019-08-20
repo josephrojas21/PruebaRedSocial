@@ -1,0 +1,10 @@
+nav{
+    background: rgb(2, 106, 155) !important;
+}
+
+#titulo{
+    margin-left: 35%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    color: black; 
+}

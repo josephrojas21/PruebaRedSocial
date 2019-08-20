@@ -1,0 +1,32 @@
+<app-menu></app-menu>
+<div class="fondo">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="title mt-5 mr-2 ">
+                <h2 id="titulo">Lista de glukers</h2>
+            </div>
+            <div class="search mt-5 m-5 ">
+                <input type="text" placeholder="Buscar Amigo" [(ngModel)]="query" />
+            </div>
+        </div>
+        
+        <div class="row ">
+            <ng-container *ngFor="let datos of users | search:query; let i= index ;">
+                <div class="col-5  mr-1 ml-1 mt-2  mr-5">
+                    <div class="row glukers">
+                        <div class="col-4 mt-1 mb-1">
+                            <img [src]="datos._links.avatar.href" alt="" class="img-fluid img">
+                        </div>
+                        <div class="col-4">
+                            <h5 >{{datos.first_name }} {{datos.last_name}}</h5>
+                            <span> {{datos.gender}}</span>
+                            <span> {{datos.phone}}</span>
+                            <span> {{datos.email}}</span>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+    
+</div>

@@ -6,6 +6,8 @@ import { FormsModule } from '@angular/forms';
 
 import { InicioRoutingModule } from './inicio-routing.module';
 import { InicioComponent } from './inicio.component';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
 
 @NgModule({
   declarations: [InicioComponent],
@@ -13,7 +15,9 @@ import { InicioComponent } from './inicio.component';
     CommonModule,
     InicioRoutingModule,
     FormsModule,
-    NgbModule
+    NgbModule,
+    AngularFireModule,
+    AngularFireDatabaseModule,
   ],
   bootstrap: [InicioComponent]
 })

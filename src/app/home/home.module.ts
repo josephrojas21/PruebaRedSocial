@@ -1,25 +1,23 @@
-import { MenuModule } from './../menu/menu.module';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { HttpClientModule } from '@angular/common/http';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
-import { CamelCasePipe } from '../pipes/camel-case.pipe';
-import { RatesDirective } from '../directives/rates.directive';
+import { MenuModule } from '../menu/menu.module';
+import { NgbModule  } from '@ng-bootstrap/ng-bootstrap';
+
 
 @NgModule({
-  declarations: [HomeComponent, CamelCasePipe,RatesDirective],
+  declarations: [HomeComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,
-    HttpClientModule,
     MenuModule,
     NgbModule,
+    HttpClientModule,
     FormsModule
-  ],
-  bootstrap: [HomeComponent]
+  ]
 })
 export class HomeModule { }

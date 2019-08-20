@@ -1,45 +1,101 @@
 <app-menu></app-menu>
-<div class="fondo">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="title mt-5 text-white">
-        <h2 >Bienvenido  {{nombre}}</h2>
-      </div>
-    </div>
+<div class="container">
     <div class="row">
-        <div class="burbuja col-4 ">
-          <div class="poder">
-            <h3>{{poderActual}}</h3>
-          </div>
+        <div class="col-2 mt-4" id="groups">
+            <h3>Grupos de Interes</h3>
+            <div class="row  mt-4" id="grupos">
+              <div class="col-6">
+                <img src="../../assets/Imgs/angu.png" alt="" class="img-fluid">
+              </div>
+              <div class="col-6">
+                <span>Glukers Angular</span>
+              </div>
+            </div>
+            <div class="row grupos mt-4" id="grupos">
+              <div class="col-6 mt-1">
+                <img src="../../assets/Imgs/js.png" alt="" class="img-fluid" id="imgjs">
+              </div>
+              <div class="col-6 mt-1">
+                <span>Glukers JavaScript</span>
+              </div>
+            </div>
+            <div class="row grupos mt-4" id="grupos">
+              <div class="col-6 mt-2 mb-1">
+                <img src="../../assets/Imgs/c.png" alt="" class="img-fluid">
+              </div>
+              <div class="col-6 mt-2 mb-1">
+                <span>Glukers C#</span>
+              </div>
+            </div>  
+            <div class="row grupos mt-4" id="grupos">
+              <div class="col-6 mt-2 mb-1">
+                <img src="../../assets/Imgs/ht.png" alt="" class="img-fluid">
+              </div>
+              <div class="col-6 mt-2 mb-1">
+                <span>Glukers Front-End</span>
+              </div>
+            </div>  
+            <div class="row grupos mt-4" id="grupos">
+              <div class="col-6 mt-2 mb-1">
+                <img src="../../assets/Imgs/php.png" alt="" class="img-fluid">
+              </div>
+              <div class="col-6 mt-2 mb-1 ">
+                <span>Glukers PHP</span>
+              </div>
+            </div>        
         </div>
-    </div>
-    <div class="row flex-row mt-5 ml-5 text-white filaHeroes">
-      <ng-container  *ngFor="let perfil of heroes let i= index ;" >
-        <div  class="col-2  mr-1 ml-1 align-content-center">
-          <div class="row">
-            <div class="col-12 ">
-              <span > {{perfil.nombre | camelCase}}</span>
+        <div class="col-6 mt-4" id="post" >
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Crear publicación</h5>
+              <input class="form-control" type="text" placeholder="Titulo"  #titulo>
+              <br>
+              <input class="form-control" type="text" placeholder="¿Que quieres compartir hoy?"  #text >
+              <br>
+              <ng-template #content let-c="close" let-d="dismiss">
+                  <div class="modal-header">
+                    <h4 class="modal-title" id="modal-basic-title">Hola Amigo!</h4>
+                    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Tu publicación a sido exitosa</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Listo</button>
+                  </div>
+                </ng-template>
+                
+              <button class="btn  btn-outline-primary"  (click)="sendPost(titulo.value,text.value)">Publicar</button>
+              <button ngf-select  accept="image/*"> Select Picture</button>
+              
             </div>
           </div>
-          <div class="row" >
-            <div class="col-12 ">
-              <img [src]="perfil.img" alt="" class="img-fluid heroe">
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12">
-                <ngb-rating [(rate)]="currentRate[i]"></ngb-rating>
-                <!-- <div class="stars-outer">
-                    <div class="stars-inner"></div>
-                </div> -->
-                <button class="btn btn-sm btn-outline-primary mr-2" (click)="revisar(i,perfil.poder1,perfil.poder2,perfil.poder3)">jugar</button>
-                <br>
-                <p>Puntaje: <b>{{currentRate[i]}}</b></p>
-            </div>
-          </div>
+          <br>
+          <ng-container *ngFor="let perfil of post let i= index ;" >
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">{{perfil.title}}</h5>
+                  <img [src]="image[i].thumbnail"  alt="" width="100%" height="200px">
+                  <p>{{perfil.body}}</p>
+                </div>
+              </div>
+          </ng-container>
         </div>
-      </ng-container>
-      
+        <div class="col-4 mt-4" id="friends">
+          <h3>Glukers recomendados</h3>
+          <ng-container *ngFor="let friend of users let i= index ;">
+              <div class="card" style="width: 18rem;">
+                  <div class="card-body">
+                      <img  [src]="friend._links.avatar.href"  class="rounded " alt="..." width="" height="50px">
+                      <h6 class="card-title"> {{friend.first_name}} {{friend.last_name}}</h6>
+                      <p class="card-text">Tienes glukers en comun con esta persona</p>
+                      <a href="#" class="btn btn-primary">Agregar amigo</a>
+                  </div>
+              </div>
+          </ng-container>
+        </div>
+
     </div>
-  </div>
 </div>

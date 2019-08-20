@@ -1,0 +1,17 @@
+
+.img{
+    height: 200px !important;
+    width: 150px;
+}
+
+#titulo{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    color: black; 
+}
+
+.glukers{
+    background-color: rgba(2, 107, 155, 0.425);
+    border-radius: 2%;
+    padding-left: 2% !important;
+}

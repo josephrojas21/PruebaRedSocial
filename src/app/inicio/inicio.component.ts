@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { JugadorService } from './../services/jugador.service';
+import { FirebaseService} from '../services/firebase.service'
+
 
 @Component({
   selector: 'app-inicio',
@@ -10,12 +11,15 @@ export class InicioComponent implements OnInit {
   nombre: string;
 
   
-  constructor(private jug:JugadorService) { }
+  constructor(public log: FirebaseService) { }
 
   ngOnInit() {
+    this.isLogget();
   }
 
-  entrar(){
-    this.jug.setNombre(this.nombre)
+  isLogget(){
+    this.log.loggedNow();
   }
+
+ 
 }
