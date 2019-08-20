@@ -1,29 +1,29 @@
 <div class="contenedor">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="titulo text-capitalize mt-5 mb-5">
-        <img src="../../assets/Imgs/logo-gluky.png" alt="" class="img-fluid">
-      </div>
-    </div>
-    <div class="row justify-content-center  ">
-      <div class="col-6 inicio">
-        <div class="row ">
-          <div class="col-12 mb-5 mt-5">
-            <form>
-              <div class="form-group">
-                <label for="correo">Email address</label>
-                <input type="email" class="form-control" id="correo"  aria-describedby="emailHelp" placeholder="Ingrese su correo" required #userEmail>
-                <small id="emailHelp" class="form-text text-muted">Intenta entra con el correo "prueba@gluky.com" y contraseña prueba</small>
-              </div>
-              <div class="form-group">
-                <label for="contraseña">Password</label>
-                <input type="password" class="form-control" id="contraseña" placeholder="Password" #userPassword required>
-              </div>
-              <button type="submit" class="btn btn-primary" (click)="log.login(userEmail.value, userPassword.value)">Sign up</button>
-            </form>
-          </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="titulo text-capitalize mt-5 mb-5">
+                <img src="../../assets/Imgs/logo-gluky.png" alt="" class="img-fluid" id="logo">
+            </div>
         </div>
-      </div>
+        <div class="row justify-content-center  ">
+            <div class="col-6 inicio">
+                <div class="row ">
+                    <div class="col-12 mb-5 mt-5">
+                        <form>
+                            <div class="form-group">
+                                <label for="correo">Email address</label>
+                                <input type="email" class="form-control" id="correo" aria-describedby="emailHelp" placeholder="Ingrese su correo" required #userEmail>
+                                <small id="emailHelp" class="form-text text-muted">Intenta entra con el correo "prueba@gluky.com" y contraseña prueba</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="contraseña">Password</label>
+                                <input type="password" class="form-control" id="contraseña" placeholder="Password" #userPassword required>
+                            </div>
+                            <button type="submit" class="btn btn-primary" (click)="log.login(userEmail.value, userPassword.value)">Sign up</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 </div>

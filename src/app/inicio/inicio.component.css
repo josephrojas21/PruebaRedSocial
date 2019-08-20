@@ -1,14 +1,18 @@
-.contenedor{
+.contenedor {
     /* background:  url(/src/assets/Imgs/original.jpg) !important;
     background-repeat: no-repeat !important;
     background-size: cover !important ;
     background-position: center!important; */
-    background: rgb(2, 106, 155);
-    padding-bottom: 15%;
-   
+    background-color: rgb(2, 106, 155);
+    background-size: cover !important;
+    padding-bottom: 50%;
 }
-.inicio{
-background: rgba(243, 243, 243, 0.77);
-border-radius: 4%;
 
+.inicio {
+    background: rgba(243, 243, 243, 0.77);
+    border-radius: 4%;
+}
+
+#logo {
+    height: 150% !important;
 }
